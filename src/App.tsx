@@ -21,8 +21,10 @@ function App() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 md:flex-row transition-colors duration-300">
       <aside className="w-full bg-gray-800 text-white dark:bg-gray-950 dark:text-gray-200 flex flex-col p-6 md:w-64">
