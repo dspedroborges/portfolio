@@ -12,19 +12,19 @@ const projects: Record<string, any>[] = [
   }
 ];
 
-const content = {
-  nav: {
+const content: Record<string, any> = {
+  "nav": {
     about: { pt: "Sobre", en: "About" },
     projects: { pt: "Projetos", en: "Projects" },
   },
-  about: {
+  "about": {
     title: { pt: "Sobre Mim", en: "About Me" },
     content: {
       pt: "Olá! Sou Pedro, um desenvolvedor web do Brasil especializado em React, Next.js, Tailwind, PostgreSQL, Golang e tecnologias web modernas. Adoro construir aplicações web limpas e responsivas.",
       en: "Hello! I'm Pedro, a web developer from Brazil specializing in React, Next.js, Tailwind, PostgreSQL, Golang, and modern web technologies. I love building clean and responsive web applications."
     }
   },
-  resume: { pt: "Clique aqui para ver meu currículo", en: "Click here to see my resume" }
+  "resume": { pt: "Clique aqui para ver meu currículo", en: "Click here to see my resume" }
 };
 
 function App() {
