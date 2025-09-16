@@ -12,23 +12,28 @@ const projects: Record<string, any>[] = [
   }
 ];
 
-function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem("darkMode");
-    return saved === "true";
-  });
+const content = {
+  nav: {
+    about: { pt: "Sobre", en: "About" },
+    projects: { pt: "Projetos", en: "Projects" },
+  },
+  about: {
+    title: { pt: "Sobre Mim", en: "About Me" },
+    content: {
+      pt: "Olá! Sou Pedro, um desenvolvedor web do Brasil especializado em React, Next.js, Tailwind, PostgreSQL, Golang e tecnologias web modernas. Adoro construir aplicações web limpas e responsivas.",
+      en: "Hello! I'm Pedro, a web developer from Brazil specializing in React, Next.js, Tailwind, PostgreSQL, Golang, and modern web technologies. I love building clean and responsive web applications."
+    }
+  },
+  resume: { pt: "Clique aqui para ver meu currículo", en: "Click here to see my resume" }
+};
 
-  const [language, setLanguage] = useState(() => {
-    const saved = localStorage.getItem("language");
-    return saved || "en";
-  });
+function App() {
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem("darkMode") === "true");
+  const [language, setLanguage] = useState(() => localStorage.getItem("language") || "en");
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    if (darkMode) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
@@ -42,13 +47,10 @@ function App() {
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold">Pedro Borges</h1>
         </div>
+
         <nav className="flex flex-col gap-4 md:gap-2">
-          <a href="#about" className="hover:text-gray-300 dark:hover:text-gray-400">
-            {language === "en" ? "About" : "Sobre"}
-          </a>
-          <a href="#projects" className="hover:text-gray-300 dark:hover:text-gray-400">
-            {language === "en" ? "Projects" : "Projetos"}
-          </a>
+          <a href="#about" className="hover:text-gray-300 dark:hover:text-gray-400">{content.nav.about[language]}</a>
+          <a href="#projects" className="hover:text-gray-300 dark:hover:text-gray-400">{content.nav.projects[language]}</a>
         </nav>
 
         <div className="flex gap-2 mt-5 justify-center">
@@ -69,19 +71,19 @@ function App() {
 
       <main className="flex-1 p-6 md:p-10 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <section id="about" className="mb-16 md:mb-20">
-          <h2 className="text-3xl font-bold mb-4">{language === "en" ? "About Me" : "Sobre Mim"}</h2>
-          <p className="text-gray-700 dark:text-gray-300">
-            {language === "en"
-              ? "Hello! I'm Pedro, a web developer from Brazil specializing in React, Next.js, Tailwind, PostgreSQL, Golang, and modern web technologies. I love building clean and responsive web applications."
-              : "Olá! Sou Pedro, um desenvolvedor web do Brasil especializado em React, Next.js, Tailwind, PostgreSQL, Golang e tecnologias web modernas. Adoro construir aplicações web limpas e responsivas."}
-          </p>
-          <a href={language == "en" ? "/resume.pdf" : "/curriculo.pdf"} target="_blank" className="my-4 block underline dark:text-gray-300">
-            {language === "en" ? "Click here to see my resume" : "Clique aqui para ver meu currículo"}
+          <h2 className="text-3xl font-bold mb-4">{content.about.title[language]}</h2>
+          <p className="text-gray-700 dark:text-gray-300">{content.about.content[language]}</p>
+          <a
+            href={language === "en" ? "/resume.pdf" : "/curriculo.pdf"}
+            target="_blank"
+            className="my-4 block underline dark:text-gray-300"
+          >
+            {content.resume[language]}
           </a>
         </section>
 
         <section id="projects" className="mb-16 md:mb-20">
-          <h2 className="text-3xl font-bold mb-4">{language === "en" ? "Projects" : "Projetos"}</h2>
+          <h2 className="text-3xl font-bold mb-4">{content.nav.projects[language]}</h2>
           <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
             {projects.map((p, i) => (
               <div key={i} className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-300">
