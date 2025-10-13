@@ -28,84 +28,9 @@ const content: Record<string, any> = {
 };
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => localStorage.getItem("darkMode") === "true");
-  const [language, setLanguage] = useState(() => localStorage.getItem("language") || "en");
-
-  useEffect(() => {
-    if (darkMode) document.documentElement.classList.add("dark");
-    else document.documentElement.classList.remove("dark");
-    localStorage.setItem("darkMode", JSON.stringify(darkMode));
-  }, [darkMode]);
-
-  useEffect(() => {
-    localStorage.setItem("language", language);
-  }, [language]);
-
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 md:flex-row transition-colors duration-300">
-      <aside className="w-full bg-gray-800 text-white dark:bg-gray-950 dark:text-gray-200 flex flex-col p-6 md:w-64">
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl font-bold">Pedro Borges</h1>
-        </div>
-
-        <nav className="flex flex-col gap-4 md:gap-2">
-          <a href="#about" className="hover:text-gray-300 dark:hover:text-gray-400">{content.nav.about[language]}</a>
-          <a href="#projects" className="hover:text-gray-300 dark:hover:text-gray-400">{content.nav.projects[language]}</a>
-        </nav>
-
-        <div className="flex gap-2 mt-5 justify-center">
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded bg-gray-700 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-500 cursor-pointer"
-          >
-            {darkMode ? "☀️" : "🌙"}
-          </button>
-          <button
-            onClick={() => setLanguage(language === "en" ? "pt" : "en")}
-            className="p-2 rounded bg-gray-700 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-500 cursor-pointer"
-          >
-            {language === "en" ? "🇧🇷" : "🇺🇸"}
-          </button>
-        </div>
-      </aside>
-
-      <main className="flex-1 p-6 md:p-10 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-        <section id="about" className="mb-16 md:mb-20">
-          <h2 className="text-3xl font-bold mb-4">{content.about.title[language]}</h2>
-          <p className="text-gray-700 dark:text-gray-300">{content.about.content[language]}</p>
-          <a
-            href={language === "en" ? "/resume.pdf" : "/curriculo.pdf"}
-            target="_blank"
-            className="my-4 block underline dark:text-gray-300"
-          >
-            {content.resume[language]}
-          </a>
-        </section>
-
-        <section id="projects" className="mb-16 md:mb-20">
-          <h2 className="text-3xl font-bold mb-4">{content.nav.projects[language]}</h2>
-          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
-            {projects.map((p, i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-300">
-                <h3 className="text-xl font-semibold mb-2 dark:text-gray-200">{p.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{p.description[language]}</p>
-                <div className="flex items-center gap-2 mt-2 flex-wrap">
-                  <a href={p.demo} target="_blank">
-                    <button className="cursor-pointer p-2 my-2 rounded-xl bg-gray-900 dark:bg-gray-700 text-white hover:bg-gray-700 dark:hover:bg-gray-600 flex items-center gap-2 justify-center">
-                      {language === "en" ? "Demo" : "Demo"}
-                    </button>
-                  </a>
-                  <a href={p.github} target="_blank">
-                    <button className="cursor-pointer p-2 my-2 rounded-xl bg-gray-900 dark:bg-gray-700 text-white hover:bg-gray-700 dark:hover:bg-gray-600 flex items-center gap-2 justify-center">
-                      Github
-                    </button>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
+    <div className="flex flex-col justify-center items-center h-screen w-full bg-gray-950 text-white">
+      <p>The website is under maintenance.</p>
     </div>
   );
 }
