@@ -70,8 +70,8 @@ function App() {
 
   const t = {
     pt: {
-      greeting: "Oi, eu sou Pedro Borges 🇧🇷",
-      subtitle: "Desenvolvedor Web com 3 anos de experiência",
+      greeting: "Pedro Borges 🇧🇷",
+      subtitle: "Desenvolvedor Web com 6 anos de experiência",
       available: "Disponível para trabalho",
       experience: "Experiência em",
       learning: "Aprendendo",
@@ -80,8 +80,8 @@ function App() {
       demo: "Demo",
     },
     en: {
-      greeting: "Hey, I'm Pedro Borges 🇧🇷",
-      subtitle: "Web Developer with 3 years of experience",
+      greeting: "Pedro Borges 🇧🇷",
+      subtitle: "Web Developer with 6 years of experience",
       available: "Available for work",
       experience: "Experience in",
       learning: "Learning",
