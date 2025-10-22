@@ -1,34 +1,226 @@
-// const projects: Record<string, any>[] = [
-//   {
-//     title: "CRUD Helper",
-//     description: {
-//       en: "A React component library that simplifies CRUD operations. Easily create forms from JSON using the FormMaker component and display, update, or delete records with the Table component. Works seamlessly with Tailwind and Bootstrap. Developers only need to define fields and provide onUpdate and onDelete functions.",
-//       pt: "Uma biblioteca de componentes React que simplifica operações CRUD. Crie formulários a partir de JSON usando o componente FormMaker e exiba, atualize ou exclua registros com o componente Table. Funciona perfeitamente com Tailwind e Bootstrap. Desenvolvedores só precisam definir os campos e fornecer funções onUpdate e onDelete."
-//     },
-//     demo: "https://crudhelper.vercel.app/",
-//     github: "https://github.com/dspedroborges/crudhelper",
-//   }
-// ];
+import { useState } from "react";
+import MapView from "./components/MapView";
 
-// const content: Record<string, any> = {
-//   "nav": {
-//     about: { pt: "Sobre", en: "About" },
-//     projects: { pt: "Projetos", en: "Projects" },
-//   },
-//   "about": {
-//     title: { pt: "Sobre Mim", en: "About Me" },
-//     content: {
-//       pt: "Olá! Sou Pedro, um desenvolvedor web do Brasil especializado em React, Next.js, Tailwind, PostgreSQL, Golang e tecnologias web modernas. Adoro construir aplicações web limpas e responsivas.",
-//       en: "Hello! I'm Pedro, a web developer from Brazil specializing in React, Next.js, Tailwind, PostgreSQL, Golang, and modern web technologies. I love building clean and responsive web applications."
-//     }
-//   },
-//   "resume": { pt: "Clique aqui para ver meu currículo", en: "Click here to see my resume" }
-// };
+const projects: Record<string, any>[] = [
+  {
+    title: "Store API",
+    description: {
+      en: "API to manage e-commerce",
+      pt: "API para gerenciamento de e-commerce"
+    },
+    techs: ["Node.js", "Express.js", "Typescript", "JWT", "bcryptjs", "Prisma"],
+    demo: "",
+    github: "",
+    inProgress: true,
+  }
+];
+
+const learningTechIcons = [
+  {
+    name: "React Native",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  },
+  {
+    name: "Go",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+  },
+];
+
+const experienceInTechIcons = [
+  {
+    name: "HTML",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+  },
+  {
+    name: "Tailwind",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    name: "JavaScript",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "React",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  },
+  {
+    name: "NodeJS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Express",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+  },
+  {
+    name: "NextJS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+];
 
 function App() {
+  const [lang, setLang] = useState<"pt" | "en">("pt");
+
+  const t = {
+    pt: {
+      greeting: "Oi, eu sou Pedro Borges 🇧🇷",
+      subtitle: "Desenvolvedor Web com 3 anos de experiência",
+      available: "Disponível para trabalho",
+      experience: "Experiência em",
+      learning: "Aprendendo",
+      projects: "Veja meus projetos",
+      github: "Github",
+      demo: "Demo",
+    },
+    en: {
+      greeting: "Hey, I'm Pedro Borges 🇧🇷",
+      subtitle: "Web Developer with 3 years of experience",
+      available: "Available for work",
+      experience: "Experience in",
+      learning: "Learning",
+      projects: "Check my projects",
+      github: "Github",
+      demo: "Demo",
+    },
+  }[lang];
+
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-full bg-gray-950 text-white">
-      <p>The website is under maintenance.</p>
+    <div className="bg-gradient-to-b from-gray-950 to-gray-800 h-auto text-white flex flex-col gap-4 items-center p-4">
+      <button
+        onClick={() => setLang(lang === "pt" ? "en" : "pt")}
+        className="cursor-pointer self-end border border-gray-600 rounded-md px-2 py-1 text-xs mb-2"
+      >
+        {lang === "pt" ? "English" : "Português"}
+      </button>
+      <div className="w-full lg:w-1/3 h-72 overflow-hidden rounded-xl">
+        <MapView />
+      </div>
+      <div className="flex items-center justify-center gap-4">
+        <a href="https://www.linkedin.com/in/dspedroborges/" target="_blank">
+          <div className="border-2 border-green-400 rounded-full">
+            <div className="m-1 flex-shrink-0 rounded-full w-24 h-24 bg-gray-900 bg-[url('/me.png')] bg-cover bg-center transition-all cursor-pointer"></div>
+          </div>
+        </a>
+        <div>
+          <h2 className="text-2xl font-bold">{t.greeting}</h2>
+          <p className="w-[25ch] lg:w-full">{t.subtitle}</p>
+          <div className="flex items-center gap-2 mt-2">
+            <span className="block rounded-full w-2 h-2 bg-green-400 animate-pulse"></span>
+            <a
+              className="border-b border-dashed border-gray-600"
+              href="mailto:xpedrostewart@gmail.com"
+            >
+              {t.available}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="w-full lg:w-1/3 p-2">
+        <h2 className="text-start text-2xl mb-4">{t.experience}</h2>
+        <div className="rounded-xl grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-4 gap-4">
+          {experienceInTechIcons.map((tech) => (
+            <div className="cursor-pointer hover:scale-105 transition-all rounded-xl p-2 border border-gray-700 group">
+              <img
+                key={tech.name}
+                title={tech.name}
+                src={tech.src}
+                className="w-full h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
+              />
+              <div className="text-xs text-gray-400 text-center mt-2">
+                {tech.name}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="w-full lg:w-1/3 p-2">
+        <h2 className="text-start text-2xl mb-4">{t.learning}</h2>
+        <div className="rounded-xl grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-4 gap-4">
+          {learningTechIcons.map((tech) => (
+            <div className="cursor-pointer hover:scale-105 transition-all rounded-xl p-2 border border-gray-700 group">
+              <img
+                key={tech.name}
+                title={tech.name}
+                src={tech.src}
+                className="w-full h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
+              />
+              <div className="text-xs text-gray-400 text-center mt-2">
+                {tech.name}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="w-full lg:w-1/3 p-2">
+        <h2 className="text-start text-2xl mb-4">{t.projects}</h2>
+        <div>
+          {projects.map((p, i) => {
+            return (
+              <div
+                key={i}
+                className="max-w-sm rounded-lg shadow-sm bg-gray-950 border-gray-700"
+              >
+                <div className="p-5">
+                  {
+                    p.inProgress && (
+                      <span className="mb-2 inline-block px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full animate-pulse">
+                        In progress...
+                      </span>
+                    )
+                  }
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
+                    {p.title}
+                  </h5>
+                  <div className="flex my-4 flex-wrap gap-2">
+                    {p.techs.map((t: string, j: number) => {
+                      return (
+                        <span
+                          key={j}
+                          className="text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm bg-gray-900 text-gray-300"
+                        >
+                          {t}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  <p className="mb-3 font-normal text-gray-400">
+                    {p.description[lang]}
+                  </p>
+                  {
+                    p.github !== "" && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-800 mr-2"
+                      >
+                        {t.github}
+                      </a>
+                    )
+                  }
+                  {
+                    p.demo !== "" && (
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-800"
+                      >
+                        {t.demo}
+                      </a>
+                    )
+                  }
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
