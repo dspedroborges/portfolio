@@ -24,19 +24,27 @@ const learningTechIcons = [
     name: "Go",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
   },
+  {
+    name: "Python",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+  },
+  {
+    name: "Docker",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+  }
 ];
 
 const experienceInTechIcons = [
   {
-    name: "HTML",
+    name: "HTML5",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
   },
   {
-    name: "CSS",
+    name: "CSS3",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
   },
   {
-    name: "Tailwind",
+    name: "Tailwind CSS",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
@@ -48,20 +56,40 @@ const experienceInTechIcons = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
-    name: "React",
+    name: "React.js",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
-    name: "NodeJS",
+    name: "React Query",
+    src: "https://tanstack.com/images/logos/logo-color-600.png"
+  },
+  {
+    name: "Zustand",
+    src: "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg"
+  },
+  {
+    name: "Vite.js",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+  },
+  {
+    name: "Node.js",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   },
   {
-    name: "Express",
+    name: "Express.js",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
   },
   {
-    name: "NextJS",
+    name: "Next.js",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "Git",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
   },
 ];
 
@@ -70,8 +98,8 @@ function App() {
 
   const t = {
     pt: {
-      greeting: "Pedro Borges 🇧🇷",
-      subtitle: "Desenvolvedor Web com 6 anos de experiência",
+      greeting: "Pedro Borges",
+      subtitle: "Desenvolvedor Web Fullstack com 6 anos de experiência",
       available: "Disponível para trabalho",
       experience: "Experiência em",
       learning: "Aprendendo",
@@ -80,8 +108,8 @@ function App() {
       demo: "Demo",
     },
     en: {
-      greeting: "Pedro Borges 🇧🇷",
-      subtitle: "Web Developer with 6 years of experience",
+      greeting: "Pedro Borges",
+      subtitle: "Fullstack Web Developer with 6 years of experience",
       available: "Available for work",
       experience: "Experience in",
       learning: "Learning",
@@ -97,12 +125,12 @@ function App() {
         onClick={() => setLang(lang === "pt" ? "en" : "pt")}
         className="cursor-pointer self-end border border-gray-600 rounded-md px-2 py-1 text-xs mb-2"
       >
-        {lang === "pt" ? "English" : "Português"}
+        {lang === "pt" ? "🇺🇸 Translate to English" : "🇧🇷 Traduzir para Português"}
       </button>
       <div className="w-full lg:w-1/3 h-72 overflow-hidden rounded-xl">
         <MapView />
       </div>
-      <div className="flex items-center justify-center gap-4">
+      <div className="w-full lg:w-1/3 flex items-center justify-center gap-4">
         <a href="https://www.linkedin.com/in/dspedroborges/" target="_blank">
           <div className="border-2 border-green-400 rounded-full">
             <div className="m-1 flex-shrink-0 rounded-full w-24 h-24 bg-gray-900 bg-[url('/me.png')] bg-cover bg-center transition-all cursor-pointer"></div>
@@ -110,7 +138,7 @@ function App() {
         </a>
         <div>
           <h2 className="text-2xl font-bold">{t.greeting}</h2>
-          <p className="w-[25ch] lg:w-full">{t.subtitle}</p>
+          <p className="break-words">{t.subtitle}</p>
           <div className="flex items-center gap-2 mt-2">
             <span className="block rounded-full w-2 h-2 bg-green-400 animate-pulse"></span>
             <a
@@ -131,7 +159,7 @@ function App() {
                 key={tech.name}
                 title={tech.name}
                 src={tech.src}
-                className="w-full h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
+                className="h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
               />
               <div className="text-xs text-gray-400 text-center mt-2">
                 {tech.name}
@@ -149,7 +177,7 @@ function App() {
                 key={tech.name}
                 title={tech.name}
                 src={tech.src}
-                className="w-full h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
+                className="h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
               />
               <div className="text-xs text-gray-400 text-center mt-2">
                 {tech.name}
