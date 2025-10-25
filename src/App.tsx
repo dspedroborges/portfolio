@@ -5,13 +5,13 @@ const projects: Record<string, any>[] = [
   {
     title: "Store API",
     description: {
-      en: "API to manage e-commerce",
+      en: "The Store API is a TypeScript/Express.js backend for an online store. It uses Prisma with PostgreSQL to manage data for users, products, transactions, and reviews. Key features include authentication, authorization, and handling product images.",
       pt: "API para gerenciamento de e-commerce"
     },
-    techs: ["Node.js", "Express.js", "Typescript", "JWT", "bcryptjs", "Prisma"],
+    techs: ["Node.js", "Express.js", "Typescript", "JWT", "bcryptjs", "Prisma", "Multer"],
     demo: "",
-    github: "",
-    inProgress: true,
+    github: "https://github.com/dspedroborges/store-api",
+    inProgress: false,
   }
 ];
 
