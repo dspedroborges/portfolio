@@ -5,8 +5,8 @@ const projects: Record<string, any>[] = [
   {
     title: "Store API",
     description: {
-      en: "The Store API is a TypeScript/Express.js backend for an online store. It uses Prisma with PostgreSQL to manage data for users, products, transactions, and reviews. Key features include authentication, authorization, and handling product images.",
-      pt: "API para gerenciamento de e-commerce"
+      "en": "The Store API is a TypeScript/Express.js backend for an online store. It uses Prisma with PostgreSQL to manage data for users, products, transactions, and reviews. Key features include authentication, authorization, and handling product images.",
+      "pt": "A Store API é um backend em TypeScript/Express.js para uma loja online. Ela utiliza Prisma com PostgreSQL para gerenciar dados de usuários, produtos, transações e avaliações. Entre suas principais funcionalidades estão autenticação, autorização e gerenciamento de imagens de produtos."
     },
     techs: ["Node.js", "Express.js", "Typescript", "JWT", "bcryptjs", "Prisma", "Multer"],
     demo: "",
