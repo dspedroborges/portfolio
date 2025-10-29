@@ -163,42 +163,6 @@ function App() {
         </div>
       </div>
       <div className="w-full lg:w-1/3 p-2">
-        <h2 className="text-start text-2xl mb-4">{t.experience}</h2>
-        <div className="rounded-xl grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-4 gap-4">
-          {experienceInTechIcons.map((tech) => (
-            <div className="cursor-pointer hover:scale-105 transition-all rounded-xl p-2 border border-gray-700 group">
-              <img
-                key={tech.name}
-                title={tech.name}
-                src={tech.src}
-                className="h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
-              />
-              <div className="text-xs text-gray-400 text-center mt-2">
-                {tech.name}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="w-full lg:w-1/3 p-2">
-        <h2 className="text-start text-2xl mb-4">{t.learning}</h2>
-        <div className="rounded-xl grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-4 gap-4">
-          {learningTechIcons.map((tech) => (
-            <div className="cursor-pointer hover:scale-105 transition-all rounded-xl p-2 border border-gray-700 group">
-              <img
-                key={tech.name}
-                title={tech.name}
-                src={tech.src}
-                className="h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
-              />
-              <div className="text-xs text-gray-400 text-center mt-2">
-                {tech.name}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="w-full lg:w-1/3 p-2">
         <h2 className="text-start text-2xl mb-4">{t.projects}</h2>
         <div>
           {projects.map((p, i) => {
@@ -259,6 +223,42 @@ function App() {
               </div>
             );
           })}
+        </div>
+      </div>
+      <div className="w-full lg:w-1/3 p-2">
+        <h2 className="text-start text-2xl mb-4">{t.experience}</h2>
+        <div className="rounded-xl grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-4 gap-4">
+          {experienceInTechIcons.map((tech) => (
+            <div className="cursor-pointer hover:scale-105 transition-all rounded-xl p-2 border border-gray-700 group">
+              <img
+                key={tech.name}
+                title={tech.name}
+                src={tech.src}
+                className="h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
+              />
+              <div className="text-xs text-gray-400 text-center mt-2">
+                {tech.name}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="w-full lg:w-1/3 p-2">
+        <h2 className="text-start text-2xl mb-4">{t.learning}</h2>
+        <div className="rounded-xl grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-4 gap-4">
+          {learningTechIcons.map((tech) => (
+            <div className="cursor-pointer hover:scale-105 transition-all rounded-xl p-2 border border-gray-700 group">
+              <img
+                key={tech.name}
+                title={tech.name}
+                src={tech.src}
+                className="h-auto max-h-12 mx-auto filter grayscale group-hover:grayscale-0"
+              />
+              <div className="text-xs text-gray-400 text-center mt-2">
+                {tech.name}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
