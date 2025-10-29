@@ -6,10 +6,20 @@ const projects: Record<string, any>[] = [
   {
     title: "Store API",
     description: {
-      "en": "The Store API is a TypeScript/Express.js backend for an online store. It uses Prisma with PostgreSQL to manage data for users, products, transactions, and reviews. Key features include authentication, authorization, and handling product images.",
-      "pt": "A Store API é um backend em TypeScript/Express.js para uma loja online. Ela utiliza Prisma com PostgreSQL para gerenciar dados de usuários, produtos, transações e avaliações. Entre suas principais funcionalidades estão autenticação, autorização e gerenciamento de imagens de produtos."
+      "en": "The Store API is a TypeScript/Express.js backend for an online store. It uses Prisma with PostgreSQL to manage data for users, products, transactions, and reviews. Key features include authentication, authorization, product image handling, and processing payments via Mercado Pago (Pix only).",
+      "pt": "A Store API é um backend em TypeScript/Express.js para uma loja online. Ela utiliza Prisma com PostgreSQL para gerenciar dados de usuários, produtos, transações e avaliações. Entre suas principais funcionalidades estão autenticação, autorização, gerenciamento de imagens de produtos e processamento de pagamentos via Mercado Pago (apenas Pix)."
     },
-    techs: ["Node.js", "Express.js", "Typescript", "JWT", "bcryptjs", "Prisma", "Multer", "Node CRON"],
+    techs: [
+      "Node.js",
+      "Express.js",
+      "Typescript",
+      "JWT",
+      "bcryptjs",
+      "Prisma",
+      "Multer",
+      "Node CRON",
+      "Mercado Pago"
+    ],
     demo: "",
     github: "https://github.com/dspedroborges/store-api",
     inProgress: false,
@@ -122,7 +132,7 @@ function App() {
 
   return (
     <div className="bg-gradient-to-b from-gray-950 to-gray-800 h-auto text-white flex flex-col gap-4 items-center p-4">
-      <Whatsapp/>
+      <Whatsapp />
       <button
         onClick={() => setLang(lang === "pt" ? "en" : "pt")}
         className="cursor-pointer self-end border border-gray-600 rounded-md px-2 py-1 text-xs mb-2"
