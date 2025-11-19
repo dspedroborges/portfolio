@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@keyframes bgPan {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.bg-pan {
+    background-repeat: no-repeat;
+    /* force larger bg so movement is visible */
+    background-size: 200% auto !important;
+    animation: bgPan 15s linear infinite alternate;
+    background-position: 0% 50%;
+}
