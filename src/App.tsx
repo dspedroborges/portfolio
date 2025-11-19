@@ -105,6 +105,7 @@ function App() {
       projects: "Veja meus projetos",
       github: "Github",
       demo: "Demo",
+      details: "Clique para alternar detalhes"
     },
     en: {
       greeting: "Pedro Borges",
@@ -115,6 +116,7 @@ function App() {
       projects: "Check my projects",
       github: "Github",
       demo: "Demo",
+      details: "Click to toggle details"
     },
   }[lang];
 
@@ -123,7 +125,7 @@ function App() {
       <Whatsapp />
       <button
         onClick={() => setLang(lang === "pt" ? "en" : "pt")}
-        className="cursor-pointer self-end border border-gray-600 rounded-md px-2 py-1 text-xs mb-2"
+        className="cursor-pointer self-center border border-gray-600 rounded-md px-2 py-1 text-xs mb-2"
       >
         {lang === "pt" ? "🇺🇸 Translate to English" : "🇧🇷 Traduzir para Português"}
       </button>
