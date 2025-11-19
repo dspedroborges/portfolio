@@ -22,6 +22,7 @@ export default function Carousel({
 
     const p = projects[index];
 
+    // ok
     return (
         <div className="relative w-full mx-auto flex flex-col items-center bg-gray-900/80 p-2 rounded-xl">
             <div className="relative w-full">
