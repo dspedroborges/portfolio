@@ -110,7 +110,7 @@ function App() {
   const t = {
     pt: {
       greeting: "Pedro Borges",
-      subtitle: "Desenvolvedor Web Fullstack com 6 anos de experiência",
+      subtitle: "Desenvolvedor Web Fullstack",
       available: "Disponível para trabalho",
       experience: "Experiência em",
       learning: "Aprendendo",
@@ -120,7 +120,7 @@ function App() {
     },
     en: {
       greeting: "Pedro Borges",
-      subtitle: "Fullstack Web Developer with 6 years of experience",
+      subtitle: "Fullstack Web Developer",
       available: "Available for work",
       experience: "Experience in",
       learning: "Learning",
