@@ -38,8 +38,8 @@ export const projects: ProjectType[] = [
     title: "Auth Project",
     image: "/auth-project.png",
     description: {
-      en: "Fullstack project that serves as a template and a study case for authentication, organized development and software architecture.",
-      pt: "Projeto fullstack que serve de template e um caso de estudo sobre autenticação, desenvolvimento organizado e arquitetura de software."
+      en: "Fullstack project that serves as a template and a study case for authentication, organized development and software architecture. The authentication is done by JWT, with JIT and a refresh token logic, revoking tokens and cleaning the database every week with a CRON job.",
+      pt: "Projeto fullstack que serve de template e um caso de estudo sobre autenticação, desenvolvimento organizado e arquitetura de software. A autenticação é feita com JWT, com JIT e uma lógica de refresh token, revogando tokens e limpando a base de dados toda semana com um CRON job."
     },
     techs: [
       "Node.js",
