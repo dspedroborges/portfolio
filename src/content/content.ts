@@ -35,58 +35,6 @@ export const sectionTitles = {
 
 export const projects: ProjectType[] = [
   {
-    title: "Car Wash",
-    image: "/car-wash.png",
-    description: {
-      en: "Fullstack project that allows a Car Wash to manage clients, cars, washes, debts, etc.",
-      pt: "Projeto Fullstack que permite a um Lava Jato gerenciar clientes, carros, lavagens, débitos, etc."
-    },
-    techs: [
-      "Vite",
-      "HTML",
-      "Tailwind CSS",
-      "Typescript",
-      "React.js",
-      "react-icons",
-      "React Router DOM",
-      "Sonner",
-      "React Query",
-      "Node.js",
-      "Recharts",
-      "File Saver",
-      "Express.js",
-      "JWT",
-      "Prisma"
-    ],
-    demo: "https://lavajatoplanaltina.vercel.app/",
-    github: "https://github.com/dspedroborges/car-wash",
-    inProgress: true,
-  },
-  {
-    title: "Quiz Maker",
-    image: "/quiz-maker.png",
-    description: {
-      en: "Quiz Maker is an web app, with support to Latex, that allows the user to create quizzes manually or by using LLM and play with them",
-      pt: "Quiz Maker é um aplicativo web, com suporte a Latex, que permite ao usuário criar quizzes manualmente ou por meio de LLM."
-    },
-    techs: [
-      "Vite",
-      "HTML",
-      "Tailwind CSS",
-      "Typescript",
-      "React.js",
-      "react-icons",
-      "React Router DOM",
-      "Sonner",
-      "React Query",
-      "React Katex",
-      "React Timer Hook"
-    ],
-    demo: "https://quizmakerproject.vercel.app/",
-    github: "https://github.com/dspedroborges/quiz-maker",
-    inProgress: true,
-  },
-  {
     title: "World View",
     image: "/world-view.gif",
     description: {
