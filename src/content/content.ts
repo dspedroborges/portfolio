@@ -35,6 +35,34 @@ export const sectionTitles = {
 
 export const projects: ProjectType[] = [
   {
+    title: "Auth Project",
+    image: "/auth-project.png",
+    description: {
+      en: "Fullstack project that serves as a template and a study case for authentication, organized development and software architecture.",
+      pt: "Projeto fullstack que serve de template e um caso de estudo sobre autenticação, desenvolvimento organizado e arquitetura de software."
+    },
+    techs: [
+      "Node.js",
+      "Express.js",
+      "Express Rate Limit",
+      "bcryptjs",
+      "Prisma",
+      "Zod",
+      "jsonwebtoken",
+      "node-cron",
+      "Tailwind CSS",
+      "React.js",
+      "Axios",
+      "React Query",
+      "React Router DOM",
+      "React Hook Form",
+      "Sonner",
+      "ShadCN"
+    ],
+    github: "https://github.com/dspedroborges/auth-project",
+    inProgress: true,
+  },
+  {
     title: "World View",
     image: "/world-view.gif",
     description: {

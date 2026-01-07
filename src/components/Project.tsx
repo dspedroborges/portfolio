@@ -5,7 +5,7 @@ export type ProjectType = {
     image: string;
     description: { en: string, pt: string };
     techs: string[];
-    demo: string;
+    demo?: string;
     github: string;
     inProgress: boolean;
 }
@@ -40,14 +40,18 @@ export default function Project({ project, language }: Props) {
                 </div>
                 <div className="flex items-center justify-start gap-2 w-full">
 
-                    <a
-                        href={project.demo}
-                        target="_blank"
-                        className="w-full flex text-white bg-blue-900 py-2 px-2 lg:px-6 hover:bg-blue-950 rounded text-lg items-center justify-center gap-2"
-                    >
-                        <BsGlobe />
-                        <span>Demo</span>
-                    </a>
+                    {
+                        project.demo && (
+                            <a
+                                href={project.demo}
+                                target="_blank"
+                                className="w-full flex text-white bg-blue-900 py-2 px-2 lg:px-6 hover:bg-blue-950 rounded text-lg items-center justify-center gap-2"
+                            >
+                                <BsGlobe />
+                                <span>Demo</span>
+                            </a>
+                        )
+                    }
 
                     <a
                         href={project.github}
