@@ -63,6 +63,25 @@ export const projects: ProjectType[] = [
     inProgress: true,
   },
   {
+    title: "Clinic Landing Page",
+    image: "/clinic-landing-page.png",
+    description: {
+      en: "Clinic Landing Page is a web application designed to showcase a modern aesthetic clinic, highlighting its advanced procedures, qualified professionals, and personalized care.",
+      pt: "Clinic Landing Page é uma aplicação web feita para mostrar o design moderno de uma clínica, evidenciando seus procedimentos avançados, profissionais qualificados e cuidado personalizado."
+    },
+    techs: [
+      "Vite",
+      "HTML",
+      "Tailwind CSS",
+      "Typescript",
+      "React.js",
+      "react-icons"
+    ],
+    demo: "https://cliniclp-pi.vercel.app/",
+    github: "https://github.com/dspedroborges/clinic-landing-page",
+    inProgress: false,
+  },
+  {
     title: "Landing Page - Nutricionista João Silva",
     image: "/landing-page.gif",
     description: {
