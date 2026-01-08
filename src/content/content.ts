@@ -63,6 +63,44 @@ export const projects: ProjectType[] = [
     inProgress: true,
   },
   {
+    title: "Landing Page - Nutricionista João Silva",
+    image: "/landing-page.gif",
+    description: {
+      en: "This is a straight forward professional landing page for a nutritionist, but it can be adapted to any professional. It gets 100% in performance and SEO in https://pagespeed.web.dev/",
+      pt: "Esta é uma landing page profissional para um nutricionista, mas pode ser adaptada para qualquer profissional. Ela obtém 100% em performance e SEO pelo site https://pagespeed.web.dev"
+    },
+    techs: [
+      "Vite",
+      "HTML",
+      "Tailwind CSS",
+      "Typescript",
+      "React.js",
+      "react-icons"
+    ],
+    demo: "https://nutritionistlp.vercel.app/",
+    github: "https://github.com/dspedroborges/nutritionist-landing-page",
+    inProgress: false,
+  },
+  {
+    title: "Fretboard Project",
+    image: "/fretboard.png",
+    description: {
+      en: "Fretboard is a web app that allows you to visualize musical scales on a guitar fretboard. Select a key and a scale to see the notes highlighted on the fretboard.",
+      pt: "Fretboard é um aplicativo web que permite a você visualizar escalas musicais no braço do violão/guitarra. Selecione um tom e uma escala para ver as notas destacadas no braço."
+    },
+    techs: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Typescript",
+      "Tone.js",
+      "react-icons"
+    ],
+    demo: "https://fretboardproject.vercel.app/",
+    github: "https://github.com/dspedroborges/fretboard",
+    inProgress: false,
+  },
+  {
     title: "World View",
     image: "/world-view.gif",
     description: {
@@ -83,25 +121,6 @@ export const projects: ProjectType[] = [
     ],
     demo: "https://worldviewproject.vercel.app/",
     github: "https://github.com/dspedroborges/world-view",
-    inProgress: false,
-  },
-  {
-    title: "Landing Page - Nutricionista João Silva",
-    image: "/landing-page.gif",
-    description: {
-      en: "This is a straight forward professional landing page for a nutritionist, but it can be adapted to any professional. It gets 100% in performance and SEO in https://pagespeed.web.dev/",
-      pt: "Esta é uma landing page profissional para um nutricionista, mas pode ser adaptada para qualquer profissional. Ela obtém 100% em performance e SEO pelo site https://pagespeed.web.dev"
-    },
-    techs: [
-      "Vite",
-      "HTML",
-      "Tailwind CSS",
-      "Typescript",
-      "React.js",
-      "react-icons"
-    ],
-    demo: "https://nutritionistlp.vercel.app/",
-    github: "https://github.com/dspedroborges/nutritionist-landing-page",
     inProgress: false,
   },
   {
